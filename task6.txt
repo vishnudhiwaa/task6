@@ -1,0 +1,66 @@
+1.Write a “person” class to hold all the details
+           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(name,age,place){
+                this.name=name,
+                this.age=age,
+                this.place=place
+            }
+        }
+        let newUser=new person("Guvi",25,"chennai")
+        console.log(newUser)
+
+        console.log(`New User\Person-${newUser.name} with age group of ${newUser.age} Registered successfully from ${newUser.place} location`)
+
+        let{name,age,place}=newUser
+        console.log(`New User\Person-${newUser.name} with age group of ${newUser.age} Registered successfully from ${newUser.place} location`)
+
+    </script>
+    
+</body>
+</html>
+
+2.write a class to calculate the Uber price
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Uber{
+            constructor(km){
+                this.km=km,
+                this.price=km*3.34
+                console.log(this.km,this.price)
+            }
+            getPrice(){
+                console.log(`Ride cost is ${this.price}`)
+            }
+            applyDiscount(){
+                console.log("Discount Calculation")
+                let discount=(25/this.price)*100
+                let priceAfterDiscount=this.price-discount
+
+                return`As a privilege customer, i got an discount and Price After Discount is Rs.${priceAfterDiscount.toFixed()}`
+
+            }
+
+        }
+        let ride=new Uber(30)
+        ride.getPrice()
+        console.log(ride.applyDiscount())
+    </script>
+    
+</body>
+</html>
